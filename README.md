@@ -25,8 +25,8 @@ Alternatively, you can use the included dockerfile, here are some command that s
 ## Credits
 Huge thanks to:
 
-[Maxine](https://github.com/bigmaxine) - Project coordinator, programming and development help <br>
-[TraceEntertains](https://github.com/TraceEntertains) - A lot of code. Just... a wild amount of code<br>
+[TraceEntertains](https://github.com/TraceEntertains) - Lead developer<br>
+[Maxine](https://github.com/bigmaxine) - Original project<br>
 [Ingunar](https://github.com/Ingunar) - All of the awesome icons & graphics (and the idea for this too)<br>
 [Moonlumen](https://github.com/Moonlumen) - Moral support and *insane* amounts of alpha testing<br>
 [WiiUReboot](https://github.com/Fangal-Airbag/) - Originally used as a foundation for this project<br>
