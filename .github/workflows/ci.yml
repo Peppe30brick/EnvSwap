@@ -24,4 +24,4 @@ jobs:
     - uses: actions/upload-artifact@v3
       with:
         name: EnvSwap-${{ env.VERSION }}
-        path: "./EnvSwap-${{ env.VERSION }}.zip"
+        path: "./dist"
