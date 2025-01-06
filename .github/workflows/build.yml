@@ -1,0 +1,46 @@
+name: Build and Package EnvSwap
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2  
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2  
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip  
+        pip install -r requirements.txt      
+
+    - name: Install PyInstaller (if needed)
+      run: |
+        pip install pyinstaller  # Installa PyInstaller per la creazione di eseguibili
+
+    - name: Build the application
+      run: |
+        pyinstaller --onefile main.py  # Sostituisci 'main.py' con il file di avvio principale, se diverso
+      working-directory: ./  # 
+
+    - name: Upload the build artifacts (if applicable)
+      uses: actions/upload-artifact@v2
+      with:
+        name: envswap-build  
+        path: ./dist/envswap  
+
+    - name: Run tests 
+      run: |
+        pytest  
